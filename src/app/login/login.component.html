@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welfare Requestition </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+  
+  <mat-toolbar>
+    <span class="example-icon">  <img
+      width="60"
+      alt="Jcy"
+      src="https://sv1.picz.in.th/images/2022/12/21/JNQLLQ.jpg"
+    /></span>
+  </mat-toolbar>
+ 
+  <div class="mb-3">
+    <form (ngSubmit)="Postdata(formLogin)"  [formGroup]="formLogin" >
+         
+      <h1>เข้าสู่ระบบ</h1>
+      <h1>(Login)</h1>
+      <div class="form-group">
+        <label for="Username" class="form-label">ชื่อผู้ใช้งาน(Username)
+        <input type="Username" class="form-control" formControlName="Username" ></label>
+      </div>
+      <div class="form-group">
+        <label for="Password" class="form-label">รหัสผ่าน(Password)
+        <input type="password" class="form-control"  formControlName="Password"></label>
+        
+      </div>
+      <div class="mb-4">
+      <button  type="submit" class="btn btn-primary"  >เข้าสู่ระบบ(Login)</button><br><br>
+      <button [routerLink]="['/register']" type="submit" class="btn btn-primary"  >ลงทะเบียน(Register)</button>
+      
+      </div>
+    </form>
+  </div>
+</body>
+</html>
