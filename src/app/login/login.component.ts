@@ -38,12 +38,12 @@ export class LoginComponent implements OnInit{
       .subscribe(
         
         data=>{
-          console.log(data);
-          if(data.message =='success'){
+         // console.log(data);
+        //  if(data.message =='success'){
         
              //const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl :'/Order';
-            this.router.navigate(['/Order']);
-           }
+            //this.router.navigate(['/Order']);
+         //  }
           
         },
         error => {

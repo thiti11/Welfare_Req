@@ -61,10 +61,10 @@ export class ApiService {
           
         })
         .pipe(map(user=>{
-         // console.log(User.Username)
+          console.log(user.Username)
         this.setToken(user.Username);
-        this.getLoggedInName.emit(true);
-        return user;
+        //this.getLoggedInName.emit(true);
+        //return user;
     
         }));
     }
@@ -73,22 +73,6 @@ export class ApiService {
           localStorage.setItem('token', token);
          }
        
-        getToken() {
-          return localStorage.getItem('token');
-        }
-     
-        deleteToken() {
-          localStorage.removeItem('token');
-         }
-        
-        isLoggedIn(){
-          const usertoken = this.getToken();
-          if(usertoken != null){
-            return true
-          }
-            return false;
-        }
-
    
    
 

@@ -5,14 +5,14 @@ import { RegisterComponent } from './register/register.component';
 import { OrderEquipmentComponent } from './order-equipment/order-equipment.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrderComponent } from './order/order.component';
-import { GuardGuard } from './guard.guard';
+
 
 
 const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent},
-  {path:"Order",component:OrderComponent,canActivate:[GuardGuard]},
+  {path:"Order",component:OrderComponent,},
   {path:"OrderEqu",component:OrderEquipmentComponent},
   {path:"Admin",component:AdminComponent}
   
